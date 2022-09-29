@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import DisplayPlanet from "./Components/DisplayPlanet/DisplayPlanet";
+import { PlanetContextProvider } from "./Components/Context/Context";
 
 function App() {
+
+  //here I import my provider. All the information in my provider, I want it available to the components
+  //defined inside my provider.
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PlanetContextProvider>
+      <div className="App">
+        <DisplayPlanet />
+      </div>
+    </PlanetContextProvider>
   );
 }
 

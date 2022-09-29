@@ -1,0 +1,44 @@
+.mainContainer {
+  display: flex;
+  background: rgba(161, 56, 72, 0.9);
+  width: auto;
+  align-self: center;
+  height: 170px;
+  border-radius: 50px;
+  border: 4px solid rgba(161, 56, 72);
+}
+.planetsContainer {
+  display: flex;
+  align-self: center;
+
+  align-self: center;
+  align-items: center;
+  gap: 30px;
+
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.planetCategory:hover {
+  cursor: pointer;
+}
+
+.planetCategory {
+  width: 155px;
+}
+
+.planetDetail {
+  width: 155px;
+}
+
+@media screen and (max-width: 391px) {
+  .planetsContainer {
+    gap: 6px;
+    margin: 0;
+    flex-direction: column;
+  }
+  .mainContainer {
+    height: auto;
+    flex-direction: column;
+  }
+}
